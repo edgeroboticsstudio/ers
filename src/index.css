@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0ea5e9;
+  --color-primary-hover: #0284c7;
+  --color-secondary: #0f172a;
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+}
 
 @layer base {
   html, body {
