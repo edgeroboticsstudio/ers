@@ -116,7 +116,7 @@ const BlogPost = () => {
                                         If you found this helpful, consider supporting the development and sharing of more robotics content.
                                     </p>
                                     <a
-                                        href="https://github.com/n3orma/Blog"
+                                        href="https://github.com/n3orma/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-xl font-bold transition-all hover:scale-105 shadow-lg shadow-primary/25"
