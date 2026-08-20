@@ -3,43 +3,43 @@
 
   <!-- Core Pages -->
   <url>
-    <loc>https://www.edgeroboticsstudio.com/</loc>
+    <loc>https://edgeroboticsstudio.com/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/about/</loc>
+    <loc>https://edgeroboticsstudio.com/about/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/studio/</loc>
+    <loc>https://edgeroboticsstudio.com/studio/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/</loc>
+    <loc>https://edgeroboticsstudio.com/services/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/projects/</loc>
+    <loc>https://edgeroboticsstudio.com/projects/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/blog/</loc>
+    <loc>https://edgeroboticsstudio.com/blog/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/contact/</loc>
+    <loc>https://edgeroboticsstudio.com/contact/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -47,79 +47,79 @@
 
   <!-- Service Details -->
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/embedded-system-software/</loc>
+    <loc>https://edgeroboticsstudio.com/services/embedded-system-software/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/robotics-software-ros2/</loc>
+    <loc>https://edgeroboticsstudio.com/services/robotics-software-ros2/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/simulation-digital-twin/</loc>
+    <loc>https://edgeroboticsstudio.com/services/simulation-digital-twin/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/computer-vision-ai/</loc>
+    <loc>https://edgeroboticsstudio.com/services/computer-vision-ai/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/navigation-control/</loc>
+    <loc>https://edgeroboticsstudio.com/services/navigation-control/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/system-integration/</loc>
+    <loc>https://edgeroboticsstudio.com/services/system-integration/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/pcb-design-hardware/</loc>
+    <loc>https://edgeroboticsstudio.com/services/pcb-design-hardware/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/mechanical-design-cad/</loc>
+    <loc>https://edgeroboticsstudio.com/services/mechanical-design-cad/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/testing-validation/</loc>
+    <loc>https://edgeroboticsstudio.com/services/testing-validation/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/devops-for-robotics/</loc>
+    <loc>https://edgeroboticsstudio.com/services/devops-for-robotics/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/rapid-prototyping/</loc>
+    <loc>https://edgeroboticsstudio.com/services/rapid-prototyping/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/technical-documentation/</loc>
+    <loc>https://edgeroboticsstudio.com/services/technical-documentation/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/services/education-and-training/</loc>
+    <loc>https://edgeroboticsstudio.com/services/education-and-training/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -127,19 +127,19 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://www.edgeroboticsstudio.com/blog/who-i-am-and-what-i-build/</loc>
+    <loc>https://edgeroboticsstudio.com/blog/who-i-am-and-what-i-build/</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/blog/stepping-back-moving-forward/</loc>
+    <loc>https://edgeroboticsstudio.com/blog/stepping-back-moving-forward/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.edgeroboticsstudio.com/blog/dragonfly-toys-to-drone-flight/</loc>
+    <loc>https://edgeroboticsstudio.com/blog/dragonfly-toys-to-drone-flight/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

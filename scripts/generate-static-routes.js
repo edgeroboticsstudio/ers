@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const SITEMAP_PATH = path.join(DIST_DIR, 'sitemap.xml');
 const INDEX_HTML_PATH = path.join(DIST_DIR, 'index.html');
-const DOMAIN = 'https://www.edgeroboticsstudio.com';
+const DOMAIN = 'https://edgeroboticsstudio.com';
 
 // Routes that need a static index.html for SPA navigation but must NOT be indexed by Google.
 // These are intentionally absent from sitemap.xml (coming-soon / thin-content pages).
@@ -40,7 +40,7 @@ function generatePage(routePath, noindex) {
 
   // ── 1. Canonical URL ────────────────────────────────────────────────────────
   htmlContent = htmlContent.replace(
-    /<link id="canonical-link" rel="canonical" href="https:\/\/www\.edgeroboticsstudio\.com\/" \/>/,
+    /<link id="canonical-link" rel="canonical" href="https:\/\/edgeroboticsstudio\.com\/" \/>/,
     `<link id="canonical-link" rel="canonical" href="${canonicalUrl}" />`
   );
 
