@@ -1,11 +1,54 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { blogPosts } from "../data/blogData";
 import { Calendar, ChevronLeft, User, Lightbulb, Heart, ExternalLink } from "lucide-react";
 import Comments from "./Comments";
+
 const BlogPost = () => {
     const { slug } = useParams();
     const post = blogPosts.find((p) => p.slug === slug);
+
+    useEffect(() => {
+        if (!post || post.disableLink) return;
+
+        const originalTitle = document.title;
+        document.title = `${post.title} - Edge Robotics Studio`;
+
+        const updateTag = (selector, attr, val, createTag) => {
+            let el = document.querySelector(selector);
+            if (!el && createTag) {
+                el = createTag();
+                document.head.appendChild(el);
+            }
+            if (el) el.setAttribute(attr, val);
+        };
+
+        const canonicalUrl = `https://edgeroboticsstudio.com/blog/${post.slug}/`;
+        updateTag('link[rel="canonical"]', 'href', canonicalUrl, () => {
+            const link = document.createElement('link');
+            link.setAttribute('rel', 'canonical');
+            return link;
+        });
+
+        if (post.excerpt) {
+            updateTag('meta[name="description"]', 'content', post.excerpt, () => {
+                const meta = document.createElement('meta');
+                meta.setAttribute('name', 'description');
+                return meta;
+            });
+            updateTag('meta[property="og:description"]', 'content', post.excerpt);
+            updateTag('meta[name="twitter:description"]', 'content', post.excerpt);
+        }
+
+        updateTag('meta[property="og:title"]', 'content', `${post.title} - Edge Robotics Studio`);
+        updateTag('meta[name="twitter:title"]', 'content', `${post.title} - Edge Robotics Studio`);
+        updateTag('meta[property="og:url"]', 'content', canonicalUrl);
+
+        return () => {
+            document.title = originalTitle;
+        };
+    }, [post]);
     if (!post || post.disableLink) {
         return (
             <div className="pt-32 pb-24 min-h-screen bg-background text-white flex flex-col items-center justify-center">

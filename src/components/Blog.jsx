@@ -2,17 +2,19 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { blogPosts } from "../data/blogData";
-import { Calendar, ArrowRight, Cpu, Code, UserCircle } from "lucide-react";
+import { Calendar, ArrowRight, Cpu, Code, UserCircle, Sparkles } from "lucide-react";
 
 const Blog = () => {
     const categories = [
+        { name: "All", icon: <Sparkles size={18} /> },
         { name: "Edge Robotics Studio", icon: <Cpu size={18} /> },
         { name: "Technical", icon: <Code size={18} /> },
         { name: "Personal", icon: <UserCircle size={18} /> }
     ];
-    const [activeCategory, setActiveCategory] = useState("Edge Robotics Studio");
-    const categoryPosts = blogPosts
-        .filter(post => post.category === activeCategory);
+    const [activeCategory, setActiveCategory] = useState("All");
+    const categoryPosts = activeCategory === "All"
+        ? blogPosts
+        : blogPosts.filter(post => post.category === activeCategory);
     return (
         <div className="pt-32 pb-24 min-h-screen bg-slate-900 border-b border-slate-800 text-white relative overflow-hidden">
             {/* Background Orbs */}
@@ -72,7 +74,7 @@ const Blog = () => {
                                     )}
                                     {!post.disableLink && (
                                         <Link to={`/blog/${post.slug}/`} className="absolute inset-0 z-10">
-                                            <span className="sr-only">Read Post</span>
+                                            <span className="sr-only">{post.title}</span>
                                         </Link>
                                     )}
                                     <div className={`relative overflow-hidden ${post.imageAspectRatio || 'h-64'}`}>
