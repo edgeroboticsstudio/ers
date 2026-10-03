@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope, FaDiscord } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa';
 const Footer = () => {
     return (
         <footer className="bg-secondary text-slate-300 py-24 border-t border-slate-800">
@@ -30,9 +30,6 @@ const Footer = () => {
                         </a>
                         <a href="https://www.youtube.com/@edge_robotics_studio" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
                             <FaYoutube size={20} />
-                        </a>
-                        <a href="https://discord.gg/xDAVq85zfX" aria-label="Discord" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
-                            <FaDiscord size={20} />
                         </a>
 
                         <a href="mailto:edgeroboticsstudio@gmail.com" aria-label="Email" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
