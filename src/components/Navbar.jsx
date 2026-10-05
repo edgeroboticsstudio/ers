@@ -23,7 +23,15 @@ const Navbar = () => {
     { name: "About", href: "/about/" },
     { name: "Studio", href: "/studio/" },
     { name: "Blog", href: "/blog/" },
+    { name: "Media", href: "/media/" },
   ];
+
+  const isLinkActive = (href) => {
+    if (href === "/") return location.pathname === "/";
+    const path = location.pathname.replace(/\/$/, "");
+    const target = href.replace(/\/$/, "");
+    return path === target || path.startsWith(target + "/");
+  };
 
   return (
     <>
@@ -78,7 +86,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to={link.href}
-                    className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all block ${location.pathname === link.href ? "bg-white/10 text-white shadow-md border border-white/5" : "text-gray-300 hover:text-white hover:bg-white/5"}`}
+                    className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all block ${isLinkActive(link.href) ? "bg-white/10 text-white shadow-md border border-white/5" : "text-gray-300 hover:text-white hover:bg-white/5"}`}
                   >
                     {link.name}
                   </Link>
@@ -162,7 +170,7 @@ const Navbar = () => {
                       to={link.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`text-4xl md:text-5xl font-black tracking-tight transition-all ${
-                        location.pathname === link.href ? "text-white" : "text-gray-400 hover:text-white"
+                        isLinkActive(link.href) ? "text-white" : "text-gray-400 hover:text-white"
                       }`}
                     >
                       {link.name}

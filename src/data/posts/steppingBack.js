@@ -1,4 +1,3 @@
-import steppingBackThumbnail from "../../assets/steppingBackThumbnail.jpg";
 import steppingBackDIC from "../../assets/steppingBackDIC.jpg";
 import steppingBackVigyanAshram from "../../assets/steppingBackVigyanAshram.jpg";
 

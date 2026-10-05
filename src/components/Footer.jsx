@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa';
 const Footer = () => {
     return (
@@ -11,15 +10,7 @@ const Footer = () => {
                         Bridging the gap between knowledge and creation by making technology, tools, and learning accessible to anyone who wants to learn, build, and innovate.
                     </p>
                 </div>
-                <div className="lg:col-span-3">
-                    <h4 className="text-white font-semibold mb-8 uppercase tracking-wider text-xs">Company</h4>
-                    <ul className="space-y-4 text-sm">
-                        <li><Link to="/about/" className="hover:text-primary transition-colors">About</Link></li>
-                        <li><Link to="/blog/" className="hover:text-primary transition-colors">Blog</Link></li>
-                        <li><Link to="/contact/" className="hover:text-primary transition-colors">Contact</Link></li>
-                    </ul>
-                </div>
-                <div className="lg:col-span-4">
+                <div className="lg:col-span-4 lg:col-start-9">
                     <h4 className="text-white font-semibold mb-8 uppercase tracking-wider text-xs">Connect</h4>
                     <div className="flex gap-4">
                         <a href="https://github.com/edgeroboticsstudio" aria-label="GitHub" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg hover:bg-primary hover:text-slate-950 transition-all">
