@@ -1,0 +1,35 @@
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "docs/**"
+
+github-actions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+
+frontend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.jsx"
+          - "**/*.js"
+          - "**/*.css"
+          - "**/*.html"
+
+configuration:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*.json"
+          - "*.config.*"
+          - "vite.config.*"
+          - "package*.json"
+
+assets:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.png"
+          - "**/*.jpg"
+          - "**/*.jpeg"
+          - "**/*.svg"
+          - "**/*.webp"
