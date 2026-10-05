@@ -166,6 +166,16 @@ function generatePage(routePath, noindex) {
       </section>
     </main>
   </div>`;
+  } else if (trimmedRoute === 'media' || segments[0] === 'media') {
+    pageTitle = 'Media & Highlights - Edge Robotics Studio';
+    pageDescription = 'Explore workshop photos, YouTube tutorials, and robotics project demonstration videos from Edge Robotics Studio.';
+    prerenderedBody = `
+  <div style="min-height:100vh;background-color:#0f172a;color:#fff;padding-top:8rem;padding-bottom:6rem;">
+    <main style="max-width:80rem;margin:0 auto;padding:0 1.5rem;">
+      <h1 style="font-size:2.5rem;font-weight:900;margin-bottom:1rem;">Media & Highlights</h1>
+      <p style="font-size:1.125rem;color:#94a3b8;margin-bottom:3rem;">Explore hands-on workshop moments, YouTube tutorials, and real-world project demonstrations in action.</p>
+    </main>
+  </div>`;
   } else if (trimmedRoute === 'contact') {
     pageTitle = 'Contact - Edge Robotics Studio';
     pageDescription = 'Get in touch with Edge Robotics Studio for custom robotics development, embedded systems, ROS2 consulting, and engineering projects.';
