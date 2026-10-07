@@ -9,6 +9,7 @@
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "postbuild": "node scripts/generate-static-routes.js",
+    "extract-thumbnails": "node scripts/extract-thumbnails.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
