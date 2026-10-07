@@ -28,20 +28,33 @@ const localVideoFiles = import.meta.glob("../assets/videos/*.{mp4,MP4,webm,mov,M
     import: "default"
 });
 
+// Automatically load all video thumbnails from src/assets/video-thumbnails/
+const localThumbnailFiles = import.meta.glob("../assets/video-thumbnails/*.{jpeg,jpg,png,webp,JPEG,JPG,PNG,WEBP}", {
+    eager: true,
+    import: "default"
+});
+
+const thumbnailMap = {};
+Object.entries(localThumbnailFiles).forEach(([path, src]) => {
+    const filename = path.split("/").pop().replace(/\.[^/.]+$/, "");
+    thumbnailMap[filename] = src;
+});
+
 const localVideosList = Object.entries(localVideoFiles).map(([path, src], index) => {
     const filename = path.split("/").pop().replace(/\.[^/.]+$/, "");
     return {
         id: `local-vid-${index}`,
         src: src,
+        poster: thumbnailMap[filename] || null,
         name: filename
     };
 });
 
 // Fallback project videos if no local videos exist
 const fallbackProjectVideos = [
-    { id: "proj-1", youtubeId: "fMZNogHoeFw" },
-    { id: "proj-2", youtubeId: "mR72Z20l4CA" },
-    { id: "proj-3", youtubeId: "yi7i39PidLU" }
+    { id: "proj-1", youtubeId: "fMZNogHoeFw", poster: "https://img.youtube.com/vi/fMZNogHoeFw/maxresdefault.jpg" },
+    { id: "proj-2", youtubeId: "mR72Z20l4CA", poster: "https://img.youtube.com/vi/mR72Z20l4CA/maxresdefault.jpg" },
+    { id: "proj-3", youtubeId: "yi7i39PidLU", poster: "https://img.youtube.com/vi/yi7i39PidLU/maxresdefault.jpg" }
 ];
 
 export const projectVideos = localVideosList.length > 0 ? localVideosList : fallbackProjectVideos;
