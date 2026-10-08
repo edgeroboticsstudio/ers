@@ -11,7 +11,7 @@ const ProjectDetails = () => {
             <div className="min-h-screen flex items-center justify-center bg-background text-white">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
-                    <Link to="/#projects" className="text-primary hover:underline">Return to Projects</Link>
+                    <Link to="/projects/" className="text-primary hover:underline">Return to Projects</Link>
                 </div>
             </div>
         );
@@ -22,7 +22,7 @@ const ProjectDetails = () => {
             <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none -z-0"></div>
             <div className="max-w-4xl mx-auto px-6 relative z-10">
                 <Link
-                    to="/#projects"
+                    to="/projects/"
                     className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8"
                 >
                     <ArrowLeft className="w-4 h-4" />
