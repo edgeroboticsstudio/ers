@@ -100,6 +100,11 @@ const Studio = () => {
                                 </Link>
                             </motion.div>
                         ))}
+                        <div className="col-span-full text-center pt-4">
+                            <Link to="/projects/" className="inline-flex items-center gap-2 text-primary hover:text-white font-medium text-sm transition-colors">
+                                View all projects on dedicated page <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
                     </motion.div>
                 );
             default:

@@ -138,6 +138,7 @@ const Contact = () => {
                            selectedParam.toLowerCase().includes(opt.toLowerCase())
                 );
                 if (found) {
+                    // eslint-disable-next-line react-hooks/set-state-in-effect
                     setSelectedOptions([found]);
                 }
             }
