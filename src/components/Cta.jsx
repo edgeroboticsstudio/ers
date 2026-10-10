@@ -31,12 +31,6 @@ const Cta = () => {
                             Start a Project
                             <ArrowRight className="w-5 h-5" />
                         </Link>
-                        <Link
-                            to="/services/"
-                            className="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl transition-all border border-slate-700 flex items-center justify-center"
-                        >
-                            Explore Studio
-                        </Link>
                     </div>
                 </motion.div>
             </div>
