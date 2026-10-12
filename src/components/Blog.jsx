@@ -42,13 +42,29 @@ const BlogPostCard = ({ post, index }) => (
                 <span className="sr-only">{post.title}</span>
             </Link>
         )}
-        <div className={`relative overflow-hidden ${post.imageAspectRatio || 'h-64'}`}>
-            <img
-                src={post.coverImage}
-                alt={post.title}
-                className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${post.imagePosition || 'object-center'}`}
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+        <div className={`relative overflow-hidden ${post.imageAspectRatio || 'h-64'} bg-slate-900/90`}>
+            {post.imageFit === 'contain' ? (
+                <>
+                    <img
+                        src={post.coverImage}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-125"
+                    />
+                    <img
+                        src={post.coverImage}
+                        alt={post.title}
+                        className="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                </>
+            ) : (
+                <img
+                    src={post.coverImage}
+                    alt={post.title}
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${post.imagePosition || 'object-center'}`}
+                />
+            )}
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-20 pointer-events-none"></div>
         </div>
         <div className="p-6 flex flex-col flex-1">
             <div className="flex items-center gap-2 text-primary text-sm mb-2">

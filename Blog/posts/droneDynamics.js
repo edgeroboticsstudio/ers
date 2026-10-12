@@ -1,5 +1,5 @@
-import droneDragonflyImage from "../assets/thumbnail_drone_dragonfly.png";
-import droneHeroBanner from "../assets/drone_hero_banner.png";
+import droneDragonflyImage from "../../src/assets/blogs/thumbnail_drone_dragonfly.png";
+import droneHeroBanner from "../../src/assets/blogs/drone_hero_banner.png";
 import {
     NewtonThirdLawDiagram,
     HoverBalanceDiagram,
