@@ -10,6 +10,7 @@ export const beyondTheFamiliarPost = {
     category: "Personal",
     excerpt: "Reflecting on my fellowship journey at Vigyan Ashram, learning through community and projects, embracing uncertainty, and stepping beyond the familiar.",
     coverImage: beyondTheFamiliarCover,
+    imageAspectRatio: "aspect-[4/3]",
     imagePosition: "object-top",
     content: [
         {

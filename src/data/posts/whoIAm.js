@@ -10,6 +10,8 @@ export const whoIAmPost = {
     category: "Personal",
     excerpt: "A reflection on the journey from a small village in Gujarat to starting Edge Robotics Studio, exploring engineering, design, and growth.",
     coverImage: thumbnailImage,
+    imageAspectRatio: "aspect-[4/3]",
+    imagePosition: "object-[60%_center]",
     content: [
         {
             type: "paragraph",

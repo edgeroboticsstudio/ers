@@ -10,6 +10,7 @@ export const steppingBackPost = {
     category: "Personal",
     excerpt: "Reflecting on 2025 as a year of stepping back, and how 2026 became the start of building Edge Robotics Studio and finding a new direction.",
     coverImage: steppingBackDIC,
+    imageAspectRatio: "aspect-[4/3]",
     content: [
         {
             type: "paragraph",
