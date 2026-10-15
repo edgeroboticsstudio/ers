@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-secondary text-slate-300 py-24 border-t border-slate-800">
+        <footer className="bg-secondary text-slate-300 py-12 sm:py-16 border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
                 <div className="flex flex-col items-start lg:col-span-8">
                     <h3 className="text-2xl font-bold text-white mb-6">Edge Robotics Studio</h3>
