@@ -69,13 +69,13 @@ const About = () => {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="relative lg:sticky lg:top-32"
+                        className="relative lg:sticky lg:top-32 max-w-md mx-auto lg:max-w-none w-full"
                     >
                         <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-90"></div>
                         <img
                             src={aboutImage}
                             alt="Dharmesh Makvana"
-                            className="relative rounded-3xl shadow-2xl border border-slate-700/50 object-cover w-full h-[500px] lg:h-[700px]"
+                            className="relative rounded-3xl shadow-2xl border border-slate-700/50 object-cover w-full aspect-[3/4]"
                         />
                     </motion.div>
                 </div>
