@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Navbar from "./components/Navbar";
@@ -10,7 +10,6 @@ import BlogPost from "./components/BlogPost";
 import ServiceDetails from "./components/ServiceDetails";
 import Services from "./components/Services";
 import ProjectDetails from "./components/ProjectDetails";
-import Projects from "./components/Projects";
 import Facility from "./components/Facility";
 import Product from "./components/Product";
 import Courses from "./components/Courses";
@@ -63,7 +62,7 @@ function App() {
           <Route path="/studio" element={<Studio />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetails />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Navigate to="/studio?tab=projects" replace />} />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
           <Route path="/facility" element={<Facility />} />
           <Route path="/product" element={<Product />} />

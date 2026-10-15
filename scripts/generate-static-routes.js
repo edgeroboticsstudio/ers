@@ -178,46 +178,6 @@ function generatePage(routePath, noindex, templateHtml) {
       <p style="font-size:1.125rem;color:#94a3b8;margin-bottom:3rem;">Explore hands-on workshop moments, YouTube tutorials, and real-world project demonstrations in action.</p>
     </main>
   </div>`;
-  } else if (trimmedRoute === 'projects') {
-    // ── Projects Hub Page ──
-    pageTitle = 'Projects - Edge Robotics Studio';
-    pageDescription = 'Explore cutting-edge robotics projects, autonomous systems, and engineering prototypes developed by Edge Robotics Studio.';
-    extraHeadTags = `
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Projects - Edge Robotics Studio",
-    "description": "Explore cutting-edge robotics projects, autonomous systems, and engineering prototypes developed by Edge Robotics Studio.",
-    "url": "${canonicalUrl}"
-  }
-  </script>`;
-    prerenderedBody = `
-  <div style="min-height:100vh;background-color:#0f172a;color:#fff;padding-top:8rem;padding-bottom:6rem;">
-    <main style="max-width:80rem;margin:0 auto;padding:0 1.5rem;">
-      <h1 style="font-size:2.5rem;font-weight:900;margin-bottom:1rem;color:#fff;">Projects</h1>
-      <p style="font-size:1.125rem;color:#94a3b8;margin-bottom:3rem;max-width:48rem;">
-        Edge Robotics Studio is dedicated to pushing the boundaries of robotics and AI. Explore our engineering prototypes, autonomous platforms, and upcoming releases.
-      </p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;">
-        <article style="background:rgba(30,41,59,0.8);border:1px solid #334155;border-radius:1.5rem;padding:2rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
-            <span style="display:inline-block;padding:0.25rem 0.75rem;background:rgba(14,165,233,0.2);color:#0ea5e9;border-radius:9999px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Coming Soon</span>
-          </div>
-          <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:0.75rem;color:#fff;">Edge AI Manipulator</h2>
-          <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;margin-bottom:1.5rem;">
-            A high-precision 6-DOF robotic arm featuring integrated edge computing for real-time trajectory optimization, object recognition, and autonomous sorting.
-          </p>
-          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-            <span style="background:#1e293b;border:1px solid #334155;color:#cbd5e1;padding:0.25rem 0.6rem;border-radius:0.5rem;font-size:0.75rem;">Robotics</span>
-            <span style="background:#1e293b;border:1px solid #334155;color:#cbd5e1;padding:0.25rem 0.6rem;border-radius:0.5rem;font-size:0.75rem;">Edge AI</span>
-            <span style="background:#1e293b;border:1px solid #334155;color:#cbd5e1;padding:0.25rem 0.6rem;border-radius:0.5rem;font-size:0.75rem;">Control Systems</span>
-          </div>
-          <p style="color:#0ea5e9;font-size:0.875rem;font-weight:600;">Initial prototyping in progress</p>
-        </article>
-      </div>
-    </main>
-  </div>`;
   } else if (trimmedRoute === 'services') {
     // ── Services Hub Page ──
     pageTitle = 'Services - Edge Robotics Studio';
@@ -308,9 +268,9 @@ function generatePage(routePath, noindex, templateHtml) {
           <a href="${DOMAIN}/services/" style="color:#0ea5e9;font-weight:600;text-decoration:none;">Explore Services &rarr;</a>
         </div>
         <div style="background:rgba(30,41,59,0.8);border:1px solid #334155;border-radius:1.5rem;padding:2rem;">
-          <h2 style="font-size:1.35rem;font-weight:700;margin-bottom:0.75rem;"><a href="${DOMAIN}/projects/" style="color:#fff;text-decoration:none;">Projects</a></h2>
+          <h2 style="font-size:1.35rem;font-weight:700;margin-bottom:0.75rem;"><a href="${DOMAIN}/studio/?tab=projects" style="color:#fff;text-decoration:none;">Projects</a></h2>
           <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;margin-bottom:1.5rem;">Innovative hardware and software developments, including our flagship Edge AI Manipulator arm.</p>
-          <a href="${DOMAIN}/projects/" style="color:#0ea5e9;font-weight:600;text-decoration:none;">Explore Projects &rarr;</a>
+          <a href="${DOMAIN}/studio/?tab=projects" style="color:#0ea5e9;font-weight:600;text-decoration:none;">Explore Projects &rarr;</a>
         </div>
       </div>
     </main>

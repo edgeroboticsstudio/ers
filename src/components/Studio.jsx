@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight, Tag, Clock, Settings, Briefcase, Home, Package, GraduationCap } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowRight, Clock, Settings, Briefcase, Home, Package, GraduationCap } from "lucide-react";
 import { serviceData } from "../data/serviceData";
 import { projectData } from "../data/projectData";
 
@@ -14,7 +14,13 @@ const Studio = () => {
         { id: "courses", name: "Courses", icon: <GraduationCap size={18} /> },
     ];
 
-    const [activeTab, setActiveTab] = useState("services");
+    const [searchParams, setSearchParams] = useSearchParams();
+    const tabParam = searchParams.get("tab");
+    const activeTab = tabs.some((t) => t.id === tabParam) ? tabParam : "services";
+
+    const handleTabClick = (tabId) => {
+        setSearchParams({ tab: tabId });
+    };
 
     const renderContent = () => {
         switch (activeTab) {
@@ -100,11 +106,6 @@ const Studio = () => {
                                 </Link>
                             </motion.div>
                         ))}
-                        <div className="col-span-full text-center pt-4">
-                            <Link to="/projects/" className="inline-flex items-center gap-2 text-primary hover:text-white font-medium text-sm transition-colors">
-                                View all projects on dedicated page <ArrowRight className="w-4 h-4" />
-                            </Link>
-                        </div>
                     </motion.div>
                 );
             default:
@@ -160,7 +161,7 @@ const Studio = () => {
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
+                            onClick={() => handleTabClick(tab.id)}
                             className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 border ${
                                 activeTab === tab.id
                                     ? "bg-primary border-primary text-slate-950 shadow-[0_0_20px_rgba(20,184,166,0.3)]"
