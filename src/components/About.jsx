@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import aboutImage from "../assets/about.jpg";
 const About = () => {
     return (
-        <div className="pt-32 pb-24 min-h-screen bg-slate-900 border-b border-slate-800 relative overflow-hidden text-white">
+        <div className="pt-28 sm:pt-32 pb-8 sm:pb-12 bg-slate-900 relative overflow-hidden text-white">
             {/* Background Orbs */}
             <div className="hidden md:block absolute top-20 left-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
                 {/* Centered Heading */}
-                <div className="text-center mb-10 sm:mb-16 lg:mb-20">
+                <div className="text-center mb-8 sm:mb-12 lg:mb-14">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -69,13 +69,13 @@ const About = () => {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="relative sticky top-24 sm:top-28 lg:top-32 w-full"
+                        className="relative sticky top-24 sm:top-28 lg:top-32 w-full max-w-md mx-auto"
                     >
                         <div className="absolute inset-0 bg-primary/20 blur-2xl sm:blur-3xl rounded-full scale-90"></div>
                         <img
                             src={aboutImage}
                             alt="Dharmesh Makvana"
-                            className="relative rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/50 object-cover w-full aspect-[3/4]"
+                            className="relative rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-700/50 object-cover w-full aspect-[3/4] max-h-[460px] sm:max-h-[520px] lg:max-h-[560px]"
                         />
                     </motion.div>
                 </div>
