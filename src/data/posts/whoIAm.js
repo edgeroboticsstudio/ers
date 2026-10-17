@@ -1,5 +1,5 @@
-import thumbnailImage from "../../assets/blogs/thumbnail.png";
-import vacationImage from "../../assets/blogs/vacation.jpeg";
+import thumbnailImage from "../../assets/blogs/who-i-am-cover.png";
+import vacationImage from "../../assets/blogs/who-i-am-vacation.jpeg";
 
 export const whoIAmPost = {
     id: 1,
