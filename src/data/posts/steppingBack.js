@@ -1,5 +1,5 @@
-import steppingBackDIC from "../../assets/blogs/steppingBackDIC.jpg";
-import steppingBackVigyanAshram from "../../assets/blogs/steppingBackVigyanAshram.jpg";
+import steppingBackDIC from "../../assets/blogs/stepping-back-dic.jpg";
+import steppingBackVigyanAshram from "../../assets/blogs/stepping-back-vigyan-ashram.jpg";
 
 export const steppingBackPost = {
     id: 4,

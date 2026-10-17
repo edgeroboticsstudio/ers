@@ -1,4 +1,4 @@
-import oneYearCompletionImage from "../../assets/blogs/1_year_completion.png";
+import oneYearCompletionImage from "../../assets/blogs/one-year-completion.png";
 
 export const oneYearPost = {
     id: 2,
