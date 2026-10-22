@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
   pull-requests: write
   issues: write
 
@@ -14,6 +15,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Ensure label set exists
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const requiredLabels = [
+              { name: 'documentation', color: '0075ca', description: 'Changes to docs and markdown files' },
+              { name: 'github-actions', color: '5319e7', description: 'Changes to GitHub workflow files' },
+              { name: 'frontend', color: '1d76db', description: 'Changes to frontend source files' },
+              { name: 'configuration', color: 'd4c5f9', description: 'Changes to configuration files' },
+              { name: 'assets', color: '0e8a16', description: 'Changes to static assets' },
+            ];
+            const { owner, repo } = context.repo;
+
+            for (const label of requiredLabels) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name: label.name });
+              } catch (error) {
+                if (error.status === 404) {
+                  await github.rest.issues.createLabel({
+                    owner,
+                    repo,
+                    ...label,
+                  });
+                } else {
+                  throw error;
+                }
+              }
+            }
+
       - uses: actions/labeler@v7
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
