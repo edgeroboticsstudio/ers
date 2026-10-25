@@ -7,8 +7,8 @@ import { spawn } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const VIDEOS_DIR = path.resolve(__dirname, '../src/assets/videos');
-const THUMBNAILS_DIR = path.resolve(__dirname, '../src/assets/video-thumbnails');
+const VIDEOS_DIR = path.resolve(__dirname, '../src/media/assets/videos');
+const THUMBNAILS_DIR = path.resolve(__dirname, '../src/media/assets/video-thumbnails');
 
 if (!fs.existsSync(THUMBNAILS_DIR)) {
   fs.mkdirSync(THUMBNAILS_DIR, { recursive: true });
