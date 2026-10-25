@@ -1,5 +1,5 @@
-import beyondTheFamiliarCover from "../../assets/blogs/beyond-the-familiar-cover.jpg";
-import beyondTheFamiliarLab from "../../assets/blogs/beyond-the-familiar-lab.jpg";
+import beyondTheFamiliarCover from "./assets/beyond-the-familiar-cover.jpg";
+import beyondTheFamiliarLab from "./assets/beyond-the-familiar-lab.jpg";
 
 export const beyondTheFamiliarPost = {
     id: 5,

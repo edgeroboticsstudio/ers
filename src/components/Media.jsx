@@ -7,7 +7,7 @@ import {
     workshopPhotos,
     projectVideos,
     youtubeVideos
-} from "../data/mediaData";
+} from "../media/mediaData";
 
 function ProjectVideoCard({ video, idx, onPlay, onPause, onOpenModal }) {
     const videoRef = useRef(null);

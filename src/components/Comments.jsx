@@ -14,7 +14,7 @@ const Comments = () => {
                 reactionsEnabled="1"
                 emitMetadata="0"
                 inputPosition="top"
-                theme="https://cdn.jsdelivr.net/gh/edgeroboticsstudio/ers@main/Blog/giscus-theme.css"
+                theme="https://cdn.jsdelivr.net/gh/edgeroboticsstudio/ers@main/src/Blog/giscus-theme.css"
                 lang="en"
                 loading="lazy"
             />
