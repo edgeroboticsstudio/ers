@@ -1,3 +1,4 @@
+
 name: PR Labeler
 
 on:
@@ -8,7 +9,6 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
-  issues: write
 
 jobs:
   label:
@@ -20,23 +20,48 @@ jobs:
         with:
           script: |
             const requiredLabels = [
-              { name: 'documentation', color: '0075ca', description: 'Changes to docs and markdown files' },
-              { name: 'github-actions', color: '5319e7', description: 'Changes to GitHub workflow files' },
-              { name: 'frontend', color: '1d76db', description: 'Changes to frontend source files' },
-              { name: 'configuration', color: 'd4c5f9', description: 'Changes to configuration files' },
-              { name: 'assets', color: '0e8a16', description: 'Changes to static assets' },
+              {
+                name: 'documentation',
+                color: '0075ca',
+                description: 'Changes to docs and Markdown files'
+              },
+              {
+                name: 'github-actions',
+                color: '5319e7',
+                description: 'Changes to GitHub workflow files'
+              },
+              {
+                name: 'frontend',
+                color: '1d76db',
+                description: 'Changes to frontend source files'
+              },
+              {
+                name: 'configuration',
+                color: 'd4c5f9',
+                description: 'Changes to configuration files'
+              },
+              {
+                name: 'assets',
+                color: '0e8a16',
+                description: 'Changes to static assets'
+              }
             ];
+
             const { owner, repo } = context.repo;
 
             for (const label of requiredLabels) {
               try {
-                await github.rest.issues.getLabel({ owner, repo, name: label.name });
+                await github.rest.issues.getLabel({
+                  owner,
+                  repo,
+                  name: label.name
+                });
               } catch (error) {
                 if (error.status === 404) {
                   await github.rest.issues.createLabel({
                     owner,
                     repo,
-                    ...label,
+                    ...label
                   });
                 } else {
                   throw error;
@@ -44,7 +69,8 @@ jobs:
               }
             }
 
-      - uses: actions/labeler@v7
+      - name: Apply labels based on changed files
+        uses: actions/labeler@v7
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: .github/labeler.yml
