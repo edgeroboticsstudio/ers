@@ -376,12 +376,21 @@ async function generateStaticRoutes() {
   const sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf-8');
   const locs = sitemapContent.match(/<loc>(.*?)<\/loc>/g) || [];
   const urls = locs.map((loc) => loc.replace(/<\/?loc>/g, '').trim());
+  const allowedBase = new URL(DOMAIN);
 
   console.log(`Found ${urls.length} URLs in sitemap.\n`);
 
   for (const url of urls) {
-    if (!url.startsWith(DOMAIN)) continue;
-    let routePath = url.replace(DOMAIN, '');
+    let parsedUrl;
+    try {
+      parsedUrl = new URL(url);
+    } catch {
+      continue;
+    }
+
+    if (parsedUrl.origin !== allowedBase.origin) continue;
+
+    let routePath = parsedUrl.pathname;
     if (routePath === '' || routePath === '/') continue;
     if (routePath.startsWith('/')) routePath = routePath.substring(1);
     generatePage(routePath, false, baseHtmlTemplate);
