@@ -223,8 +223,8 @@ function generatePage(routePath, noindex, templateHtml) {
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "${service.title.replace(/"/g, '\\"')}",
-    "description": "${service.description.replace(/"/g, '\\"')}",
+    "name": ${JSON.stringify(service.title)},
+    "description": ${JSON.stringify(service.description)},
     "provider": {
       "@type": "Organization",
       "name": "Edge Robotics Studio",
