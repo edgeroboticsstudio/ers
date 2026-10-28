@@ -22,7 +22,9 @@ configuration:
   - changed-files:
       - any-glob-to-any-file:
           - "*.json"
+          - "**/*.json"
           - "*.config.*"
+          - "**/*.config.*"
           - "vite.config.*"
           - "package*.json"
 
