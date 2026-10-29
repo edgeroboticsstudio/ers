@@ -130,7 +130,14 @@ const server = http.createServer((req, res) => {
     res.end(html);
   } else if (req.method === 'GET' && req.url.startsWith('/video/')) {
     const rawFilename = decodeURIComponent(req.url.replace('/video/', ''));
-    const filePath = path.join(VIDEOS_DIR, rawFilename);
+    const filePath = path.resolve(VIDEOS_DIR, rawFilename);
+    const relativePath = path.relative(VIDEOS_DIR, filePath);
+
+    if (relativePath.startsWith('..') || path.isAbsolute(relativePath)) {
+      res.writeHead(403);
+      res.end('Forbidden');
+      return;
+    }
 
     if (fs.existsSync(filePath)) {
       const ext = path.extname(rawFilename).toLowerCase();
