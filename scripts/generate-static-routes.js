@@ -104,8 +104,8 @@ function generatePage(routePath, noindex, templateHtml) {
       "@type": "WebPage",
       "@id": "${canonicalUrl}"
     },
-    "headline": "${post.title.replace(/"/g, '\\"')}",
-    "description": "${post.excerpt.replace(/"/g, '\\"')}",
+    "headline": ${JSON.stringify(post.title)},
+    "description": ${JSON.stringify(post.excerpt)},
     "image": "${DOMAIN}/favicon-512x512.png",
     "author": {
       "@type": "Person",
