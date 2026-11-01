@@ -25,6 +25,13 @@ const videoFiles = fs.readdirSync(VIDEOS_DIR).filter(file => {
   return !fs.existsSync(thumbPath);
 });
 
+const safeVideoFilesJson = JSON.stringify(videoFiles)
+  .replace(/</g, '\\u003c')
+  .replace(/>/g, '\\u003e')
+  .replace(/&/g, '\\u0026')
+  .replace(/\u2028/g, '\\u2028')
+  .replace(/\u2029/g, '\\u2029');
+
 if (videoFiles.length === 0) {
   console.log('All video thumbnails are already generated! Use "npm run extract-thumbnails -- --all" to force regenerate.');
   process.exit(0);
@@ -47,7 +54,7 @@ const server = http.createServer((req, res) => {
   <h1>Extracting Thumbnails...</h1>
   <div id="status">Starting...</div>
   <script>
-    const videos = ${JSON.stringify(videoFiles)};
+    const videos = ${safeVideoFilesJson};
     const statusEl = document.getElementById('status');
 
     async function extractThumbnails() {
