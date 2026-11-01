@@ -131,9 +131,9 @@ const server = http.createServer((req, res) => {
   } else if (req.method === 'GET' && req.url.startsWith('/video/')) {
     const rawFilename = decodeURIComponent(req.url.replace('/video/', ''));
     const filePath = path.resolve(VIDEOS_DIR, rawFilename);
-    const videosRoot = path.resolve(VIDEOS_DIR) + path.sep;
+    const relativePath = path.relative(VIDEOS_DIR, filePath);
 
-    if (filePath !== path.resolve(VIDEOS_DIR) && !filePath.startsWith(videosRoot)) {
+    if (relativePath.startsWith('..') || path.isAbsolute(relativePath)) {
       res.writeHead(403);
       res.end('Forbidden');
       return;
