@@ -16,7 +16,7 @@
   "dependencies": {
     "@giscus/react": "^3.1.0",
     "framer-motion": "^14.9.0",
-    "lucide-react": "^1.65.0",
+    "lucide-react": "^1.66.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-google-recaptcha-v3": "^1.11.0",
@@ -34,7 +34,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.7",
     "gh-pages": "^6.3.0",
-    "globals": "^17.13.0",
+    "globals": "^17.14.0",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.5"
   }
