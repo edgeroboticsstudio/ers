@@ -13,8 +13,8 @@ const Product = () => {
                     transition={{ duration: 0.5 }}
                     className="space-y-6"
                 >
-                    <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Products</span>
+                    <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
+                        <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 pb-2">Products</span>
                     </h1>
                     
                     <motion.div 

@@ -36,7 +36,7 @@ const ServiceDetails = () => {
                         <div className="p-5 bg-surface/50 backdrop-blur-md rounded-2xl border border-slate-700/50 shadow-[0_0_30px_-5px_rgba(14,165,233,0.3)]">
                             {React.cloneElement(service.icon, { className: "w-12 h-12 text-primary" })}
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 tracking-tight">
+                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 tracking-tight leading-tight pb-2">
                             {service.title}
                         </h1>
                     </div>
