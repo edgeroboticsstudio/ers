@@ -34,7 +34,7 @@ const ProjectDetails = () => {
                 >
                     <div className="mb-12">
                         <div className="mb-2"></div>
-                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 mb-6 tracking-tight pb-2">
+                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 mb-6 tracking-tight leading-tight pb-2">
                             {project.title}
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">

@@ -34,7 +34,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight">
-                        Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Discovery</span> <br />
+                        Empowering <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 pb-2">Discovery</span> <br />
                         Guiding Exploration
                     </h1>
                 </motion.div>
