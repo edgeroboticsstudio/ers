@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 const Hero = () => {
     return (
-        <div className="relative w-full min-h-screen overflow-hidden">
+        <div className="relative w-full min-h-screen overflow-hidden bg-background">
             {/* Background Image */}
             <motion.img
                 initial={{ scale: 1.1 }}

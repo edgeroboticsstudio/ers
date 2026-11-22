@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -20,16 +20,21 @@ import Footer from "./components/Footer";
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!hash) {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    } else {
-      setTimeout(() => {
+    }
+  }, [pathname, hash]);
+
+  useEffect(() => {
+    if (hash) {
+      const timer = setTimeout(() => {
         const element = document.getElementById(hash.replace("#", ""));
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
+      return () => clearTimeout(timer);
     }
   }, [pathname, hash]);
 
