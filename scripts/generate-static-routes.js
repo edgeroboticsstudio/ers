@@ -406,38 +406,44 @@ async function generateStaticRoutes() {
   console.log('\nPrerendering home page in dist/index.html...');
   let homeHtml = baseHtmlTemplate;
   const homePrerender = `
-  <div style="min-height:100vh;background-color:#0f172a;color:#fff;padding-top:8rem;padding-bottom:6rem;">
-    <main style="max-width:80rem;margin:0 auto;padding:0 1.5rem;text-align:center;">
-      <h1 style="font-size:3rem;font-weight:900;margin-bottom:1.5rem;color:#fff;line-height:1.2;">
+  <div style="min-height:100vh;background-color:#020617;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem 1rem 2.5rem 1rem;position:relative;">
+    <main style="max-width:64rem;margin:0 auto;text-align:center;position:relative;z-index:10;">
+      <h1 style="font-size:3rem;font-weight:900;margin-bottom:1.5rem;color:#fff;line-height:1.2;letter-spacing:-0.025em;">
         Empowering <span style="color:#0ea5e9;">Discovery</span><br />Guiding Exploration
       </h1>
-      <p style="font-size:1.25rem;color:#94a3b8;margin-bottom:3rem;max-width:48rem;margin-left:auto;margin-right:auto;line-height:1.8;">
-        An independent robotics studio founded by Dharmesh Makvana, specializing in ROS2, Embedded Systems, Computer Vision, and AI. Bridging the gap between knowledge and creation.
-      </p>
-      <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:4rem;">
-        <a href="${DOMAIN}/contact/" style="background:#0ea5e9;color:#020617;padding:0.875rem 2rem;border-radius:9999px;font-weight:700;text-decoration:none;">Start Your Project</a>
-        <a href="${DOMAIN}/studio/" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.875rem 2rem;border-radius:9999px;font-weight:600;border:1px solid rgba(255,255,255,0.2);text-decoration:none;">Explore Studio</a>
+      <div style="margin-bottom:3rem;"></div>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="${DOMAIN}/contact/" style="background:#0ea5e9;color:#020617;padding:1rem 2rem;border-radius:9999px;font-weight:600;text-decoration:none;">Start Your Project</a>
+        <a href="${DOMAIN}/services/" style="background:rgba(255,255,255,0.1);color:#fff;padding:1rem 2rem;border-radius:9999px;font-weight:600;border:1px solid rgba(255,255,255,0.2);text-decoration:none;">Explore Studio</a>
       </div>
-      <section style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:2rem;text-align:left;margin-top:4rem;">
+    </main>
+  </div>
+  <section style="padding:6rem 1.5rem;background-color:#020617;position:relative;">
+    <div style="max-width:80rem;margin:0 auto;">
+      <div style="text-align:center;max-width:48rem;margin:0 auto 4rem auto;">
+        <h2 style="font-size:2.25rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">Built For The Edge</h2>
+        <p style="color:#9ca3af;font-size:1.125rem;line-height:1.75;">We empower individuals to transform ideas into creation while fostering creativity, problem-solving, and continuous learning, enabling a new generation of self-reliant creators.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:2rem;">
         <div style="background:rgba(30,41,59,0.8);border:1px solid #334155;border-radius:1.5rem;padding:2rem;">
-          <h2 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Hands-on Learning</h2>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Hands-on Learning</h3>
           <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;">Activity-based education programs designed to bridge the gap between theoretical concepts and real-world application.</p>
         </div>
         <div style="background:rgba(30,41,59,0.8);border:1px solid #334155;border-radius:1.5rem;padding:2rem;">
-          <h2 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">End-to-End Solutions</h2>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">End-to-End Solutions</h3>
           <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;">Bringing together mechanical design, electronics, software, and AI to build practical, intelligent machines.</p>
         </div>
         <div style="background:rgba(30,41,59,0.8);border:1px solid #334155;border-radius:1.5rem;padding:2rem;">
-          <h2 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Accessible Technology</h2>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Accessible Technology</h3>
           <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;">Providing the tools, resources, and knowledge necessary to empower anyone to become a self-reliant creator.</p>
         </div>
         <div style="background:rgba(30,41,59,0.8);border:1px solid #334155;border-radius:1.5rem;padding:2rem;">
-          <h2 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Real-world Innovation</h2>
+          <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Real-world Innovation</h3>
           <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;">Focusing on transforming raw ideas into impactful, deployable systems that drive meaningful progress.</p>
         </div>
-      </section>
-    </main>
-  </div>`;
+      </div>
+    </div>
+  </section>`;
 
   homeHtml = homeHtml.replace(
     /<div id="root"><\/div>/,
