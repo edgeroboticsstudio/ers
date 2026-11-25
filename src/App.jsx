@@ -16,6 +16,7 @@ import Courses from "./components/Courses";
 import Studio from "./components/Studio";
 import Media from "./components/Media";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -74,6 +75,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
         </Routes>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );
